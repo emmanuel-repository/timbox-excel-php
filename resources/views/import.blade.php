@@ -18,8 +18,12 @@
                      <label class="col-form-label">Ingrese el excel con el Layout</label>
                      <input class="fomr-control" type='file' name="layoute_file" accept=".csv, .xlsx">
                  </div>
+                 <!-- <div class="form-group col-md-3">
+                    
+                 </div> -->
                  <div class="form-group col-md-12 ">
-                  <button class="btn btn-primary" type="submit">Guardar</buttomn>
+                  <button class="btn btn-success" type="submit">Guardar</button>
+                  <a class="btn btn-primary" href="{{url('excel/Layout-ordenado.xlsx')}}" download="Plantilla">Descargar plantilla de Excel</a>
                  </div>
              </div>
          </form>

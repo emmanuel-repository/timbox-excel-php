@@ -35,7 +35,7 @@ class ExcelController extends Controller {
 
                     $archivo_nuevo = fopen($fichero_txt, 'a');
                     file_put_contents($fichero_txt, $text_array[$i], LOCK_EX);
-                    
+
                     $name_base = "layout_" . time() . "{$i}" . ".txt";
                     $zip->addFile($fichero_txt, $name_base);
                     $array_ficheros_creados[$i] = $fichero_txt;
@@ -50,7 +50,7 @@ class ExcelController extends Controller {
             }
 
             return response()->download($zip_file);
-            unlink(public_path($zip_file));
+                    
         } else {
             dd('El excel se enuentra vacio');
         }
